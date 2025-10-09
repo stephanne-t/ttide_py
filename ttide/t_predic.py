@@ -60,7 +60,7 @@ def t_predic(t_time, names, freq, tidecon,
         I = snr > synth
         if not any(I):
             print('No predictions with this SNR')
-            yout = np.nan + np.zeros_like(t_time, dtype='float64')
+            yout = np.nan + np.zeros_like(t_time[:,0], dtype='float64')
             return yout
         tidecon = tidecon[I, :]
         names = names[I]
